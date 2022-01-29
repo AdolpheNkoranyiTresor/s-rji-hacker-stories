@@ -1,28 +1,15 @@
 import React from 'react';
-import "./index.css";
 
-const myDetails = {
-  firstName: 'Adolphe',
-  lastName: 'Tresor',
-  age: 25,
-};
-
-function getTitle(title){
-  return title;
+function greetLion(name){
+  return name;
 }
 
-function App() {
+function App(){
   return(
-    // <div>
-    //   <h1>Hello {getTitle('React')}</h1>
-
-    //   <label htmlFor='search'>Search: </label>
-    //   <input id="search" type="text" />
-    // </div>
-    <div className='myDetails'>
-      <p>Hello, <br /> My name is {myDetails.firstName} {myDetails.lastName} and I am {myDetails.age} years old. </p>
+    <div>
+      <h1>Hey Mr {greetLion(`Bonface`)}</h1>
     </div>
-  );
+    );
 }
 
 export default App;

@@ -1,15 +1,20 @@
-import React from 'react';
+import React from "react";
+import "./index.css";
 
-function greetLion(name){
-  return name;
-}
+const myDetails = {
+  firstName: "Adolphe",
+  lastName: "Trésor ",
+  age: 25,
+};
 
-function App(){
-  return(
-    <div>
-      <h1>Hey Mr {greetLion(`Bonface`)}</h1>
+function App() {
+  return (
+    <div className="myDetails">
+      <p>
+        Hello, <br /> My name is {myDetails.firstName} {myDetails.lastName}
+        I am {myDetails.age} years old.
+      </p>
     </div>
-    );
+  );
 }
-
 export default App;

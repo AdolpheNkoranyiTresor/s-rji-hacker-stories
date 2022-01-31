@@ -25,29 +25,28 @@ const list = [
 ];
 function App() {
   return (
-    <div>
+    <div className="container">
       <h1>My hacker Stories</h1>
 
       <label htmlFor="serch">Search: </label>
       <input type="text" id="search" />
 
       <hr />
-
+      <ol>
       {list.map(function (item) {
         return (
-          <div key={item.objectID} className="container">
+          <li key={item.objectID}>
             <span>
-              <a href={item.url}>{item.title} </a>
-            </span>
-            <span>{item.author} </span>
-            <span> {item.nationality} </span>
-            <span>is {item.age} years old.</span>
-            <span> {item.num_comments} </span>
-            <span> {item.points} </span>
-            <span> {item.objectID} </span>
-          </div>
+                <a href={item.url}> {item.title} </a>
+              </span>
+              <span> {item.author} is {item.age} Years old</span>
+              <span> {item.nationality} by nationality.</span>
+              <span> {item.num_comments} comments and</span>
+              <span> {item.points} points.</span>
+          </li>
         );
       })}
+      </ol>
     </div>
   );
 }
